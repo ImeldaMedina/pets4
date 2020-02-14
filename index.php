@@ -58,9 +58,14 @@ $f3->route("GET|POST /order", function($f3) {
             $_SESSION['animal']= $animal;
             if($animal === "dog"){
                 $pet =new Dog();
-            }elseif($animal === "cat"){
+            }
+            elseif($animal === "cat"){
                 $pet = new Cat();
-            }else{
+            }
+            elseif($animal === "octopus"){
+                $pet = new Octopus();
+            }
+            else{
                 $pet = new Pet();
             }
             $_SESSION['pet']=$pet;
@@ -84,6 +89,7 @@ $f3->route("GET|POST /order2", function($f3) {
         $color = $_POST['color'];
         if (validColor($color)) {
             $_SESSION['pet']->setColor($color);
+            $_SESSION['color'] = $color;
             $f3->reroute('/results');
         }
         else {
