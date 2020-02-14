@@ -11,4 +11,10 @@ class Cat extends Pet{
     {
         echo $this->getName() . " is meowing<br>";
     }
+
+    function type()
+    {
+        echo $this->getName() . "is a cat<br>";
+    }
+
 }//end of Cat class

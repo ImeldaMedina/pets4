@@ -20,6 +20,11 @@ class Pet{
         echo $this->_name . " is talking<br>";
     }
 
+    function type()
+    {
+        echo $this->_name . "is a pet<br>";
+    }
+
     function getName()
     {
         return $this->_name;
