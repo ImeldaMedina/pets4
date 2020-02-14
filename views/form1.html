@@ -11,7 +11,7 @@
     <check if="{{ isset(@errors['animal']) }} ">
         <p>{{ @errors['animal'] }}</p>
     </check>
-    <input type="text" class="form-control" id="animal" name="animal" >
+    <input type="text" class="form-control" id="animal" name="animal" value="{{@POST.animal}}">
     <button type="submit">Next>></button>
 </form>
 </body>
