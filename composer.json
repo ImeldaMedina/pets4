@@ -1,9 +1,14 @@
 {
-  "name": "imedinag@srv601/328/pets4",
+  "name": "328/pets4",
   "authors": [
     {
       "name": "Imelda Medina",
       "email": "imedina-castaneda@mail.greenriver.edu"
+    },
+    {
+      "name": "Elijah Maret",
+      "email": "emaret2@mail.greenriver.edu"
+
     }
   ],
   "require": {
