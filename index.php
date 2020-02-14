@@ -56,6 +56,14 @@ $f3->route("GET|POST /order", function($f3) {
         $animal = $_POST['animal'];
         if(validString($animal)){
             $_SESSION['animal']= $animal;
+            if($animal === "dog"){
+                $pet =new Dog();
+            }elseif($animal === "cat"){
+                $pet = new Cat();
+            }else{
+                $pet = new Pet();
+            }
+            $_SESSION['pet']=$pet;
             $f3->reroute('/order2');
         }else{
             $f3->set("errors['animal']", "Please enter an animal.");
@@ -74,6 +82,7 @@ $f3->route("GET|POST /order2", function($f3) {
     if (isset($_POST['color'])) {
         $color = $_POST['color'];
         if (validColor($color)) {
+            $_SESSION['pet']->setColor($color);
             $_SESSION['color'] = $color;
             $f3->reroute('/results');
         }

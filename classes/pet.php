@@ -3,6 +3,7 @@ class Pet{
     private $_name;
     private $_color;
 
+
     //Parameterized constructor
     function __construct($name="unknown", $color="?")
     {
@@ -34,4 +35,15 @@ class Pet{
     {
         $this->_name = $name;
     }
+
+    function getColor()
+    {
+        return $this->_color;
+    }
+
+    function setColor($color)
+    {
+        $this->_color = $color;
+    }
+
 }
