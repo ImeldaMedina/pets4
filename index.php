@@ -64,6 +64,7 @@ $f3->route("GET|POST /order", function($f3) {
                 $pet = new Pet();
             }
             $_SESSION['pet']=$pet;
+
             $f3->reroute('/order2');
         }else{
             $f3->set("errors['animal']", "Please enter an animal.");
