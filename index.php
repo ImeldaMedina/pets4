@@ -84,7 +84,6 @@ $f3->route("GET|POST /order2", function($f3) {
         $color = $_POST['color'];
         if (validColor($color)) {
             $_SESSION['pet']->setColor($color);
-            $_SESSION['color'] = $color;
             $f3->reroute('/results');
         }
         else {
